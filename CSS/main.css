@@ -1,3 +1,19 @@
+/* open-sans-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v40-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* open-sans-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/open-sans-v40-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
 *{
     padding: 0;
     margin: 0;
@@ -5,7 +21,7 @@
 
 }
 body{
-    font-family: sans-serif ;
+    font-family: 'Open Sans', sans-serif;
 }
 li{
     list-style: none;
@@ -105,7 +121,13 @@ li{
 .servisec-cards{
     padding-top:1rem;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    &:nth-last-child(-n + 2){
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+    }
     align-items: center;
 }
 .servisec-card{
@@ -133,6 +155,11 @@ li{
     padding-top: 8rem;
     padding-bottom: 8rem;
 }
+.about-cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .about-card{
     display: flex;
     justify-content: center;
@@ -150,7 +177,10 @@ li{
 }
 
 
-
+.about-btn{
+    text-decoration: none;
+    font-weight: 700;
+}
 .footer{
     height: 328px;
     color: white;
